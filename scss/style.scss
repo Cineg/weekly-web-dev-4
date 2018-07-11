@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
+$bg: #4d6681;
+$bglight: #ffffff;
+$bggrey: #c5cdd1;
+$font: 'Roboto', sans-serif;
+$fontColor: #475055;
+$menuActiveColor: #56ccc8; 
+$linkHover: darken($menuActiveColor, 20%);
+$fbcolor: #4d6baa;
+$twittercolor: #4fc6f8;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: $fontColor;
+    text-decoration: none;
+}
+
+body{
+    background-color: $bg;
+    font-family: $font;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 60px;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.row{
+    display: flex;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.active{
+    background: $menuActiveColor;
+}
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    background: $bglight;
+    grid-column: 1/7;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    #burger{
+        align-self: flex-start;
+        width: 60px;
+        height: 60px;
+        margin-right: 45px;
+        transition: background .3s ease-in-out;
+
+        &:hover{
+            background: $bggrey;
+            span{
+                background: $linkHover;
+            }
+        }
+
+        span{
+            display: block;
+            width: 20px;
+            height: 3px;
+            background: $fontColor;
+            margin-bottom: 3px;
+            border-radius: 10px;
+            transition: background .3s ease-in-out;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    ul{
+        li{
+            margin-right: 45px;
+
+            &:last-child{
+                margin: 0;
+            }
+
+            a{
+                transition: color .3s ease-in-out;
+
+                &:hover{
+                    color: $linkHover;
+                }
+            }
+
+        }
+    }
+    
+    #rightSide{
+        div{
+            margin: 0px 20px;
+            
+            &:nth-child(2){
+                margin: 0;
+            }
+        }
+        .socials{
+            border-left: 1px solid $bggrey;
+            border-right: 1px solid $bggrey;
+            height: 60px;
+            padding: 10px;
+            span{
+                padding: 10px;
+            }            
+        }
+    }
+}
+
+
+#tileMenu{
+    grid-column: 1/3;
+
+    .left-tileMenu{
+        width: 50%;
+        ul{
+            li{
+                height: 60px;
+                background-color: $bglight;
+                border-bottom: 1px solid $bggrey;
+                align-items: center;
+                transition: 0.3s;
+                span{
+                    width: 33%;
+                    display: flex;
+                    justify-content: center;
+                }
+                &:hover{
+                    background-color: lighten($menuActiveColor, 30%);
+                }
+            }
+            .active{
+                background-color: $menuActiveColor;
+                color: $bglight;
+                &:hover{
+                    background-color: $menuActiveColor;
+                }
+            }
+        }
+
+        .info{
+            background-color: $bggrey;
+        }
+
+
+    }
+
+}
+
+
+

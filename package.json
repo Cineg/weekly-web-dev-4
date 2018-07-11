@@ -1,0 +1,14 @@
+{
+  "name": "weekly-web-dev-4",
+  "version": "1.0.0",
+  "description": "Weekly web dev 4",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/"
+  },
+  "author": "Marcin Michałek",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}

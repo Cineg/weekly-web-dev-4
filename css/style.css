@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  color: #475055;
+  text-decoration: none; }
+
+body {
+  background-color: #4d6681;
+  font-family: "Roboto", sans-serif; }
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 60px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px; }
+
+.row {
+  display: flex; }
+
+.column {
+  display: flex;
+  flex-direction: column; }
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.active {
+  background: #56ccc8; }
+
+nav {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  grid-column: 1/7;
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+  nav #burger {
+    align-self: flex-start;
+    width: 60px;
+    height: 60px;
+    margin-right: 45px;
+    transition: background .3s ease-in-out; }
+    nav #burger:hover {
+      background: #c5cdd1; }
+      nav #burger:hover span {
+        background: #2c908d; }
+    nav #burger span {
+      display: block;
+      width: 20px;
+      height: 3px;
+      background: #475055;
+      margin-bottom: 3px;
+      border-radius: 10px;
+      transition: background .3s ease-in-out; }
+      nav #burger span:last-child {
+        margin-bottom: 0; }
+  nav ul li {
+    margin-right: 45px; }
+    nav ul li:last-child {
+      margin: 0; }
+    nav ul li a {
+      transition: color .3s ease-in-out; }
+      nav ul li a:hover {
+        color: #2c908d; }
+  nav #rightSide div {
+    margin: 0px 20px; }
+    nav #rightSide div:nth-child(2) {
+      margin: 0; }
+  nav #rightSide .socials {
+    border-left: 1px solid #c5cdd1;
+    border-right: 1px solid #c5cdd1;
+    height: 60px;
+    padding: 10px; }
+    nav #rightSide .socials span {
+      padding: 10px; }
+
+#tileMenu {
+  grid-column: 1/3; }
+  #tileMenu .left-tileMenu {
+    width: 50%; }
+    #tileMenu .left-tileMenu ul li {
+      height: 60px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #c5cdd1;
+      align-items: center;
+      transition: 0.3s; }
+      #tileMenu .left-tileMenu ul li span {
+        width: 33%;
+        display: flex;
+        justify-content: center; }
+      #tileMenu .left-tileMenu ul li:hover {
+        background-color: #ccefee; }
+    #tileMenu .left-tileMenu ul .active {
+      background-color: #56ccc8;
+      color: #ffffff; }
+      #tileMenu .left-tileMenu ul .active:hover {
+        background-color: #56ccc8; }
+    #tileMenu .left-tileMenu .info {
+      background-color: #c5cdd1; }
